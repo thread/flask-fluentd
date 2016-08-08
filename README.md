@@ -8,8 +8,6 @@ A library to log fluent events from Flask applications
 pip install flask-fluentd
 ```
 
-(TODO: publish to PyPI)
-
 ## Configuration
 
 Takes just one configuration setting, of EVENT_TAG_PREFIX, which is prepended
