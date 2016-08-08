@@ -33,7 +33,7 @@ def before_request():
 
 @app.route('/')
 def index():
-    g.events.event(('test'), {'foo': 'bar'})
+    g.events.event(('test', {'foo': 'bar'})
 
 ```
 

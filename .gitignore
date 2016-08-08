@@ -1,7 +1,6 @@
 # setuptools cruft
 build/
 Flask_fluentd.egg-info/
-setup.cfg
 
 # python cruft
 *.pyo

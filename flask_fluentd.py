@@ -3,14 +3,6 @@ from Queue import Empty, Queue
 from flask import current_app, request
 from fluent import sender
 
-# Find the stack on which we want to store the database connection.
-# Starting with Flask 0.9, the _app_ctx_stack is the correct one,
-# before that we need to use the _request_ctx_stack.
-try:
-    from flask import _app_ctx_stack as stack
-except ImportError:
-    from flask import _request_ctx_stack as stack
-
 class Fluentd(object):
     def __init__(self, app=None):
         self.app = app
