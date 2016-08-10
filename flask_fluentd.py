@@ -36,8 +36,10 @@ class Fluentd(object):
         pumping = True
         while pumping:
             try:
-                tag, evt = self.queue.get()
+                tag, evt = self.queue.get_nowait()
                 self._sender.emit(tag, evt)
                 self.queue.task_done()
             except Empty:
                 pumping = False
+
+        return exception
