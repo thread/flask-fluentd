@@ -18,7 +18,6 @@ setup(
     long_description=__doc__,
     py_modules=['flask_fluentd'],
     zip_safe=False,
-    include_package_data=True,
     platforms='any',
     install_requires=[
         'Flask',
