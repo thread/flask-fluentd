@@ -9,8 +9,8 @@ from setuptools import setup
 
 setup(
     name='Flask-fluentd',
-    version='0.1',
-    url='https://github.com/thread/flask-fluentd/archive/0.1.tar.gz',
+    version='0.2',
+    url='https://github.com/thread/flask-fluentd/archive/0.2.tar.gz',
     license='MIT',
     author='Thread',
     author_email='j+flask_fluentd@thread.com',
@@ -23,6 +23,7 @@ setup(
     install_requires=[
         'Flask',
         'fluent-logger',
+        'six',
     ],
     classifiers=[
         'Environment :: Web Environment',

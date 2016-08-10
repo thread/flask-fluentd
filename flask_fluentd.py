@@ -1,4 +1,4 @@
-from Queue import Empty, Queue
+from six.moves.queue import Empty, Queue
 
 from flask import current_app, request
 from fluent import sender
