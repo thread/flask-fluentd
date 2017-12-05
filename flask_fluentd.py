@@ -1,7 +1,10 @@
+import logging
+
 from six.moves.queue import Empty, Queue
 
 from flask import current_app, request
 from fluent import sender
+
 
 class Fluentd(object):
     def __init__(self, app=None):
@@ -41,5 +44,10 @@ class Fluentd(object):
                 self.queue.task_done()
             except Empty:
                 pumping = False
+            except Exception, e:
+                # This is bad but it's worse to foul the request because
+                # of a logging issue
+                logging.exception(e)
+                self.queue.task_done()
 
         return exception
