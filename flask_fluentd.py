@@ -44,7 +44,7 @@ class Fluentd(object):
                 self.queue.task_done()
             except Empty:
                 pumping = False
-            except Exception, e:
+            except Exception as e:
                 # This is bad but it's worse to foul the request because
                 # of a logging issue
                 logging.exception(e)
