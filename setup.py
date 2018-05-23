@@ -8,7 +8,7 @@ from setuptools import setup
 
 
 setup(
-    name='Flask-fluentd',
+    name='flask-fluentd',
     version='0.2.2',
     url='https://github.com/thread/flask-fluentd/archive/0.2.2.tar.gz',
     license='MIT',
